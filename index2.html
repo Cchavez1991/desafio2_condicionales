@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      img {
+        width: 200px;
+      }
+      .container{display: flex;}
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div>
+        <img src="assets/imgs/arbol.jpg" alt="image1" />
+        <input type="number" id="number1" placeholder="# de stickers" />
+      </div>
+      <div>
+        <img src="assets/imgs/arbol2.jpg" alt="image1" />
+        <input type="number" id="number2" placeholder="# de stickers" />
+      </div>
+      <div>
+        <img src="assets/imgs/arbol3.jpg" alt="image1" />
+        <input type="number" id="number3" placeholder="# de stickers" />
+      </div>
+    </div>
+    <button
+      onclick="
+        var value1 = document.querySelector('#number1').value;
+        var value2 = document.querySelector('#number2').value;
+        var value3 = document.querySelector('#number3').value;
+        var parrafo = document.querySelector('#parrafo')
+        const total = Number(value1)+ Number(value2)+Number(value3); 
+    if (total<=10){
+        parrafo.innerHTML='Tienes '+ total + ' '+'stickers';
+        } else if (total>10){parrafo.innerHTML='Llevas muchos stickers';}
+    "
+    >
+      Calcular total
+    </button>
+    <p id="parrafo"></p>
+  </body>
+</html>
